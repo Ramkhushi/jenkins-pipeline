@@ -7,6 +7,11 @@ pipeline{
             }
             
         }
+        stage('move to javacod') {
+            steps {
+                sh 'cd ${WORKSPACE}/java-code1'
+            }
+        }
         stage('maven compile') {
             steps {
                 sh 'mvn compile'
